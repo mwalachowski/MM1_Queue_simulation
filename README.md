@@ -2,9 +2,9 @@
 
 ### How to use simulator
 
-There is simple GUI where you can set desirable influx of clients, duration of the simulation and choose if you want simulation with or without exclusions. "Simulation" button runs simulation with provided parameters. "Diagram" button shows number of clients in queue in time. "Statistics" button shows several statistics collected during last simulation compared with values calculated from theoretical equations.
+There is simple GUI where you can set desirable influx of clients, duration of the simulation and choose if you want simulation with or without server exclusions. "Simulation" button runs simulation with provided parameters. "Diagram" button shows number of clients in queue in time. "Statistics" button shows several statistics collected during last simulation compared with values calculated from theoretical equations.
 
-![Image](https://github.com/mwalachowski/MM1_Queue_simulation/blob/master/GUI.PNG)
+![Image1](https://github.com/mwalachowski/MM1_Queue_simulation/blob/master/GUI.PNG)
 
 ### Short description of methods used in simulation.
 
@@ -14,3 +14,9 @@ There is simple GUI where you can set desirable influx of clients, duration of t
 * get() - a method that retrieves an event with the least time of occurrence among events not yet downloaded.
 * event_action() - a method that, depending on the current event, changes the parameters of the simulation and using the put() method to add the appropriate events to the list. In case of a client's arrival event, it generates the next client's arrival event and checks if the simulation conditions (if the server can handle the next client) allow adding the client's output event. In the case of the client output event, it checks if the server is active, if not, it adds the output event after the server's switch on event. It also checks if there is another client to handle and, depending on that, adds or not the handle event. In case of a server switch off event, the server generates switching on event. 
 * start() - a method that adds the simulation start and end events, and then executes the event_action() method with the get() parameter until it encounters the end event.
+
+### Simulation example diagram
+
+Number of clients in queue in server with exclusions with influx parameter set on 4. 
+
+![Image2](https://github.com/mwalachowski/MM1_Queue_simulation/blob/master/Diagram.PNG)
