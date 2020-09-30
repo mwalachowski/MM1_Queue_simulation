@@ -7,7 +7,7 @@ background_colour_1 = "#DDDDDD"
 background_colour_2 = "#CCCCCC"
 
 root = tk.Tk()
-root.title('OAST Project nr 1')
+root.title('M/M/1 queue simulator')
 root.iconbitmap('logo_PW.ico')
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH, bg=background_colour_1)
@@ -45,9 +45,9 @@ frame_onoff.place(rely=0.66, relwidth=1, relheight=0.33)
 type_s = tk.BooleanVar()
 type_s.set(True)
 
-tk.Radiobutton(frame_onoff, text="Without exlusions", variable=type_s, value=False, bg=background_colour_2, font=18).\
+tk.Radiobutton(frame_onoff, text="Without exclusions", variable=type_s, value=False, bg=background_colour_2, font=18).\
     pack(anchor='w')
-tk.Radiobutton(frame_onoff, text="With exlusions", variable=type_s, value=True, bg=background_colour_2, font=18).\
+tk.Radiobutton(frame_onoff, text="With exclusions", variable=type_s, value=True, bg=background_colour_2, font=18).\
     pack(anchor='w')
 
 """Second frame"""
@@ -64,7 +64,7 @@ button_diagram = tk.Button(frame_calculation, text="Diagram", bg=background_colo
                            command=lambda: Lg.show_diagram(type_s.get()))
 button_diagram.place(relx=0.1, rely=0.4, relwidth=0.8, relheight=0.2)
 
-button_save = tk.Button(frame_calculation, text="Save", bg=background_colour_2, font=20,
+button_save = tk.Button(frame_calculation, text="Statistics", bg=background_colour_2, font=20,
                         command=lambda: Lg.save_simulation(type_s.get()))
 button_save.place(relx=0.1, rely=0.7, relwidth=0.8, relheight=0.2)
 
