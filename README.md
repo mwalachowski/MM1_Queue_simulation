@@ -4,7 +4,7 @@
 
 There is simple GUI where you can set desirable influx of clients, duration of the simulation and choose if you want simulation with or without exclusions. "Simulation" button runs simulation with provided parameters. "Diagram" button shows number of clients in queue in time. "Statistics" button shows several statistics collected during last simulation compared with values calculated from theoretical equations.
 
-![Image](https://github.com/mwalachowski/MM1_Queue_simulation/GUI.png)
+![Image](GUI.png)
 
 ### Short description of methods used in simulation.
 
